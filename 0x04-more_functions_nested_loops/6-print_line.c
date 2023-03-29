@@ -8,9 +8,6 @@
 
 void print_line(int n)
 {
-	if (n <= 0)
-		return;
-
 	int i;
 
 	for (i = 0; i < n; i++)
