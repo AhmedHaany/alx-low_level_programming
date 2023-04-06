@@ -1,28 +1,24 @@
-#include "main.h"
-
 /**
- *_strncat - concatenate n characters from src to dest
- *@dest: first string
- *@src: second string
- *@n: number of characters
- *Return: the new string
-*/
-
+ * _strncat - concatenate n characters from src to dest
+ * @dest: will be added on
+ * @src: take from it n characters
+ * @n: number of characters to concatenate
+ *
+ * Return: concatenated string
+ */
 char *_strncat(char *dest, char *src, int n)
 {
+	int destlen, srclen;
+
 	if (n <= 0)
 		return (dest);
-
-	int i, j;
-
-	for (i = 0; dest[i] != '\0'; i++)
+	for (destlen = 0; dest[destlen] != '\0'; destlen++)
 	{}
 
-	for (j = 0; src[j] != '\0' && j < n ; j++)
+	for (srclen = 0; src[srclen] != '\0' && srclen < n; srclen++)
 	{
-		dest[i++] = src[j];
+		dest[destlen++] = src[srclen];
 	}
-
-	dest[i] = '\0';
+	dest[destlen] = '\0';
 	return (dest);
 }
