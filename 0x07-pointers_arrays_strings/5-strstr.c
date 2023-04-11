@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
 * _strstr - locates a substring.
@@ -7,22 +7,22 @@
 *
 * Return: array
 */
-
 char *_strstr(char *haystack, char *needle)
 {
 	while (*haystack != '\0')
 	{
-		char *ans = haystack;
+		char *duplicate = haystack;
 
-		if (*haystack == *needle)
+		while (*haystack == *needle && *haystack != '\0' && *needle != '\0')
 		{
-			haystack++;
 			needle++;
+			haystack++;
 		}
-		else
-			*haystack++;
-		if (*needle == '\0')
-			return (ans);
+		if (!*needle != '\0')
+		{
+			return (duplicate);
+		}
+		haystack++;
 	}
-	return (NULL);
+	return (0);
 }
