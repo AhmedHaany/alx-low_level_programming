@@ -9,6 +9,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	char *str;
 	int sz1 = 0, sz2 = 0, sum = 0;
 
 	if (s1 != NULL)
@@ -19,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 		{}
 	sum = sz1 + sz2;
 
-	char *str = malloc(sizeof(char) * sum + 1);
+	str = malloc(sizeof(char) * sum + 1);
 
 	if (str == NULL)
 		return (NULL);
