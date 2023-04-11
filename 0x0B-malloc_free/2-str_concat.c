@@ -12,6 +12,9 @@ char *str_concat(char *s1, char *s2)
 	int i, j, sz1, sz2, sum;
 	char *str;
 
+	sz1 = 0;
+	sz2 = 0;
+
 	if (s1 != NULL)
 		for (sz1 = 0; s1[sz1] != '\0'; sz1++)
 		{}
