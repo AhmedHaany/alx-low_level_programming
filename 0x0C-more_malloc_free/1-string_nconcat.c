@@ -13,11 +13,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0, j = 0, sz1 = 0, sz2 = 0;
 	char *s;
 
-	for (; s1[sz1] != '\0'; sz1++)
-	{}
-
-	for (; s2[sz2] |= '\0'; sz2++)
-	{}
+	while (s1 && s1[sz1])
+		sz1++;
+	while (s2 && s2[sz2])
+		sz2++;
 
 	if (n < sz2)
 		s = malloc(sz1 + n + 1);
